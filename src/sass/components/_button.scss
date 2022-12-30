@@ -6,8 +6,9 @@
   text-decoration: none;
   font-size: 0.875rem;
   line-height: 1;
-  font-weight: 500;
-  color: var(--white);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-100);
+  white-space: nowrap;
   padding: 1.1em 1.25em;
   border: 2px solid var(--btn-color);
   border-radius: 0.375em;
@@ -22,11 +23,11 @@
 }
 
 .btn-primary {
-  --btn-color: var(--clr-primary-100);
+  --btn-color: var(--clr-primary-400);
 }
 
 .btn-secondary {
-  --btn-color: var(--clr-secondary-200);
+  --btn-color: var(--clr-secondary-400);
 }
 
 .btn-default {

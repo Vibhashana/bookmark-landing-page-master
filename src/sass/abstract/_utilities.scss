@@ -1,5 +1,60 @@
+$colors: (
+  "primary": (
+    200,
+    400,
+    700,
+  ),
+  "neutral": (
+    100,
+    200,
+  ),
+  "secondary": (
+    400,
+  ),
+);
+
+@each $color, $variants in $colors {
+  @each $variant in $variants {
+    .text-#{$color}-#{$variant} {
+      color: var(--clr-#{$color}-#{$variant});
+    }
+
+    .bg-#{$color}-#{$variant} {
+      background-color: var(--clr-#{$color}-#{$variant});
+    }
+  }
+}
+
 .flex {
   display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.ml-auto {
+  margin-inline-start: auto;
+}
+
+.mr-auto {
+  margin-inline-end: auto;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.mt-auto {
+  margin-block-start: auto;
+}
+
+.mb-auto {
+  margin-block-end: auto;
+}
+
+.my-auto {
+  margin-inline: auto;
 }
 
 .text-center {

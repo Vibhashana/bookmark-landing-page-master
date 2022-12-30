@@ -1,15 +1,37 @@
 :root {
   // Colours
-  --clr-primary-100: hsl(231, 69%, 60%);
   --clr-primary-700: hsl(229, 31%, 21%);
+  --clr-primary-400: hsl(231, 69%, 60%);
 
-  --clr-neutral-100: hsl(229, 8%, 60%);
+  --clr-neutral-200: hsl(229, 8%, 60%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
-  --clr-secondary-200: hsl(0, 94%, 66%);
+  --clr-secondary-400: hsl(0, 94%, 66%);
 
-  --white: hsl(0, 0%, 100%);
+  //Font family
+  --ff-primary: "Rubik", sans-serif;
+
+  --ff-body: var(--ff-primary);
+
+  //Font sizes
+  --fs-400: 1.125rem;
+  --fs-500: ;
+  --fs-600: ;
+  --fs-700: ;
+  --fs-800: 1.5rem;
+  --fs-900: clamp(2rem, 4vw + 1rem, 3rem);
+
+  //Font weights
+  --fw-regular: 400;
+  --fw-bold: 500;
 
   //Screen sizes
-  --sz-mobile: 375px;
+  --sz-mobile: 23.4375em;
   --sz-desktop: 1440px;
+}
+
+@media (min-width: var(--sz-mobile)) {
+  :root {
+    --fs-800: 2rem;
+  }
 }
