@@ -25,3 +25,11 @@ h2,
   font-size: var(--fs-800);
   line-height: 1.25;
 }
+
+p {
+  margin-block-end: var(--size-400);
+}
+
+p:not([class]) {
+  max-width: 42ch;
+}

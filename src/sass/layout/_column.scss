@@ -4,7 +4,7 @@
   gap: var(--gap);
 }
 
-@media (min-width: 23.4375em) {
+@media (min-width: 40em) {
   .even-columns {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;

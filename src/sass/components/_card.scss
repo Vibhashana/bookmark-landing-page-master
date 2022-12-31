@@ -1,0 +1,11 @@
+.card {
+  box-shadow: 0 0.825em 1em hsl(0 0% 0% / 10%);
+  border-radius: var(--size-400);
+}
+
+.card__footer {
+  background-image: url(../images/bg-dots.svg);
+  background-position-x: 0;
+  background-repeat: repeat-x;
+  padding: var(--size-500);
+}

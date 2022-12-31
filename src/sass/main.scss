@@ -1,5 +1,23 @@
 @use "base";
 @use "abstract";
-@use "components/button";
 @use "layout/container";
 @use "layout/column";
+@use "components/button";
+@use "components/navigation";
+@use "components/card";
+@use "components/tabs";
+@use "components/social-nav";
+
+.hero {
+  text-align: center;
+
+  & p {
+    margin-inline: auto;
+  }
+
+  &__cta-btn-wrapper {
+    gap: 1rem;
+    margin-top: var(--size-700);
+    justify-content: center;
+  }
+}

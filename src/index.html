@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <meta
+      name="description"
+      content="Bookmark landing page challenge on Frontend Mentor"
+    />
+
     <link
       rel="icon"
       type="image/png"
@@ -20,12 +25,14 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/script.js" defer></script>
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
-  <body class="bg-neutral-100 text-neutral-200">
+  <body class="bg-neutral-100 text-neutral-300">
     <header class="primary-header">
-      <div class="container">
-        <a href="#" class="logo text-primary-700">
+      <div class="container flex align-items-center space-between">
+        <a href="#" class="logo text-primary-700" aria-label="Bookmark logo">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -52,28 +59,32 @@
           </svg>
         </a>
 
-        <button type="button" class="primary-header__nav-btn">
-          <span class="primary-header__nav-btn-open">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
-              <path
-                fill="#242A45"
-                fill-rule="evenodd"
-                d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"
-              />
-            </svg>
-          </span>
-          <span class="primary-header__nav-btn-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15">
-              <path
-                fill="#FFF"
-                fill-rule="evenodd"
-                d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"
-              />
-            </svg>
-          </span>
+        <button
+          type="button"
+          class="primary-header__nav-btn"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Menu</span>
+          <img
+            src="images/icon-hamburger.svg"
+            alt=""
+            aria-hidden="true"
+            class="primary-header__nav-btn-open"
+          />
+          <img
+            src="images/icon-close.svg"
+            alt=""
+            aria-hidden="true"
+            class="primary-header__nav-btn-close"
+          />
         </button>
 
-        <nav class="navigation navigation--primary" aria-label="Primary">
+        <nav
+          class="navigation navigation--primary"
+          aria-label="Primary"
+          id="primary-navigation"
+        >
           <ul class="navigation__nav-list" role="list">
             <li>
               <a href="#">Features</a>
@@ -88,15 +99,58 @@
               <a href="#" class="btn btn-secondary">Login</a>
             </li>
           </ul>
+
+          <div class="social-nav | hidden-lg mt-auto">
+            <ul role="list" aria-label="Social links">
+              <li>
+                <a
+                  href="#"
+                  class="social-nav__item"
+                  aria-label="Find us on Facebook"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      fill="currentcolor"
+                      fill-rule="evenodd"
+                      d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="social-nav__item"
+                  aria-label="Follow us on Twitter"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="20"
+                  >
+                    <path
+                      fill="currentcolor"
+                      fill-rule="evenodd"
+                      d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero decorative">
+      <section class="hero decorative | py-900">
         <div class="container">
           <div class="even-columns">
-            <div>
+            <div class="flow">
               <h1>A Simple Bookmark Manager</h1>
               <p>
                 A clean and simple interface to organize your favourite
@@ -104,7 +158,7 @@
                 instantly. Try it for free.
               </p>
 
-              <div class="flex">
+              <div class="hero__cta-btn-wrapper flex">
                 <a href="#" class="btn btn-primary">Get it on Chrome</a>
                 <a href="#" class="btn btn-default">Get it on Firefox</a>
               </div>
@@ -116,8 +170,10 @@
         </div>
       </section>
 
-      <section class="features decorative decorative--right">
-        <div class="container">
+      <section
+        class="features decorative decorative--right | text-center py-900"
+      >
+        <div class="container | flow">
           <h2>Features</h2>
           <p>
             Our aim is to make it quick and easy for you to access your
@@ -126,24 +182,57 @@
           </p>
 
           <div class="tabs">
-            <ul class="tabs__list">
-              <li>
-                <a href="#">Simple Bookmarking</a>
+            <ul class="tabs__list" role="tablist">
+              <li class="tabs__item" role="presentation">
+                <button
+                  type="button"
+                  class="tabs__link tabs__link--active"
+                  id="simple"
+                  role="tab"
+                  aria-controls="simple-tab"
+                  aria-selected="true"
+                >
+                  Simple Bookmarking
+                </button>
               </li>
-              <li>
-                <a href="#">Speedy Searching</a>
+              <li class="tabs__item" role="presentation">
+                <button
+                  type="button"
+                  class="tabs__link"
+                  role="tab"
+                  id="speedy"
+                  aria-controls="speedy-tab"
+                  aria-selected="false"
+                >
+                  Speedy Searching
+                </button>
               </li>
-              <li>
-                <a href="#">Easy Sharing</a>
+              <li class="tabs__item" role="presentation">
+                <button
+                  type="button"
+                  class="tabs__link"
+                  role="tab"
+                  id="easy"
+                  aria-controls="easy-tab"
+                  aria-selected="false"
+                >
+                  Easy Sharing
+                </button>
               </li>
             </ul>
 
             <div class="tabs__content">
-              <div class="tabs__tab-item even-columns">
+              <div
+                class="tabs__tab-pane even-columns"
+                id="simple-tab"
+                role="tabpanel"
+                aria-labelledby="simple"
+                tabindex="0"
+              >
                 <div>
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
-                <div>
+                <div class="flow">
                   <h3>Bookmark in one click</h3>
                   <p>
                     Organize your bookmarks however you like. Our simple
@@ -154,11 +243,11 @@
                 </div>
               </div>
 
-              <!-- <div class="tabs__tab-item even-columns">
+              <!-- <div class="tabs__tab-pane even-columns" id="speedy-tab" role="tabpanel" aria-labelledby="speedy" tabindex="0">
                 <div>
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
-                <div>
+                <div class="flow">
                   <h3>Intelligent search</h3>
                   <p>
                     Our powerful search feature will help you find saved sites
@@ -169,11 +258,11 @@
                 </div>
               </div>
 
-              <div class="tabs__tab-item even-columns">
+              <div class="tabs__tab-pane even-columns" id="easy-tab" role="tabpanel" aria-labelledby="easy" tabindex="0">
                 <div>
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
-                <div>
+                <div class="flow">
                   <h3>Share your bookmarks</h3>
                   <p>
                     Easily share your bookmarks and collections with others.
@@ -188,21 +277,21 @@
         </div>
       </section>
 
-      <section class="download">
-        <div class="container">
+      <section class="download | text-center py-900">
+        <div class="container | flow">
           <h2>Download the extension</h2>
           <p>
             We've got more browsers in the pipeline. Please do let us know if
             you've got a favourite you'd like us to prioritize.
           </p>
 
-          <div class="download__inner">
+          <div class="download__inner | flow">
             <div class="card">
               <div class="card__body">
                 <img
                   src="images/logo-chrome.svg"
                   alt="Chrome"
-                  class="card__img"
+                  class="card__img | ml-auto mr-auto"
                 />
                 <div class="card__title">Add to Chrome</div>
                 <div class="card__text">Minimum version 6.2</div>
@@ -219,7 +308,7 @@
                 <img
                   src="images/logo-firefox.svg"
                   alt="Chrome"
-                  class="card__img"
+                  class="card__img | ml-auto mr-auto"
                 />
                 <div class="card__title">Add to Firefox</div>
                 <div class="card__text">Minimum version 55</div>
@@ -236,7 +325,7 @@
                 <img
                   src="images/logo-opera.svg"
                   alt="Chrome"
-                  class="card__img"
+                  class="card__img | ml-auto mr-auto"
                 />
                 <div class="card__title">Add to Opera</div>
                 <div class="card__text">Minimum version 46</div>
@@ -251,8 +340,8 @@
         </div>
       </section>
 
-      <section class="faq">
-        <div class="container">
+      <section class="faq | py-900">
+        <div class="container | flow">
           <h2>Frequently Asked Questions</h2>
           <p>
             Here are some of our FAQs. If you have any other questions you'd
@@ -329,15 +418,19 @@
         </div>
       </section>
 
-      <section class="contact | bg-primary-400 text-center" id="contact">
-        <div class="container">
+      <section class="contact | bg-primary-400 text-center py-700" id="contact">
+        <div class="container | flow">
           <p>35,000+ already joined</p>
           <h2 class="text-neutral-100">
             Stay up-to-date with what we're doing
           </h2>
           <form>
             <div class="form-input">
-              <input type="text" class="form-input__control" />
+              <input
+                type="text"
+                class="form-input__control"
+                placeholder="Enter your email address"
+              />
             </div>
             <button type="submit" class="btn btn-secondary">Contact Us</button>
           </form>
@@ -345,9 +438,9 @@
       </section>
     </main>
 
-    <footer class="footer | bg-primary-700">
-      <div class="container">
-        <a href="#" class="logo text-neutral-100">
+    <footer class="footer | bg-primary-700 py-500">
+      <div class="footer__inner-wrapper | container">
+        <a href="#" class="logo text-neutral-100" aria-label="Bookmark logo">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -397,7 +490,7 @@
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path
-                    fill="#FFF"
+                    fill="currentcolor"
                     fill-rule="evenodd"
                     d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
                   />
@@ -412,7 +505,7 @@
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                   <path
-                    fill="#FFF"
+                    fill="currentcolor"
                     fill-rule="evenodd"
                     d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
                   />

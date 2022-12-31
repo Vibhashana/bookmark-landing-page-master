@@ -1,26 +1,13 @@
-$colors: (
-  "primary": (
-    200,
-    400,
-    700,
-  ),
-  "neutral": (
-    100,
-    200,
-  ),
-  "secondary": (
-    400,
-  ),
-);
+@use "variables" as *;
 
-@each $color, $variants in $colors {
-  @each $variant in $variants {
-    .text-#{$color}-#{$variant} {
-      color: var(--clr-#{$color}-#{$variant});
+@each $type, $variants in $colors {
+  @each $variant, $color in $variants {
+    .text-#{$type}-#{$variant} {
+      color: var(--clr-#{$type}-#{$variant});
     }
 
-    .bg-#{$color}-#{$variant} {
-      background-color: var(--clr-#{$color}-#{$variant});
+    .bg-#{$type}-#{$variant} {
+      background-color: var(--clr-#{$type}-#{$variant});
     }
   }
 }
@@ -31,6 +18,14 @@ $colors: (
 
 .align-items-center {
   align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+:where(.flow > :not(:first-child)) {
+  margin-top: var(--flow-space, 1em);
 }
 
 .ml-auto {
@@ -57,6 +52,35 @@ $colors: (
   margin-inline: auto;
 }
 
+@each $variant, $size in $sizes {
+  .py-#{$variant} {
+    padding-block: var(--size-#{$variant});
+  }
+}
+
 .text-center {
   text-align: center;
+
+  p:not([class]) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (min-width: 40em) {
+  .hidden-lg {
+    display: none;
+  }
 }
