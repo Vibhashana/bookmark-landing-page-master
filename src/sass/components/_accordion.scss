@@ -1,0 +1,26 @@
+.accordion {
+  --flow-space: var(--size-800);
+  text-align: start;
+  margin-bottom: var(--size-600);
+  max-width: 33.75rem;
+  margin-inline: auto;
+
+  &__toggle {
+    border-bottom: 1px solid var(--clr-neutral-150);
+    color: var(--clr-primary-700);
+  }
+  &__icon {
+    color: var(--clr-primary-400);
+  }
+
+  &__body {
+    /* visibility: hidden; */
+    /* height: 0; */
+    padding-block: var(--size-400);
+    border-bottom: 1px solid var(--clr-neutral-150);
+
+    &__body p {
+      margin-bottom: 0;
+    }
+  }
+}

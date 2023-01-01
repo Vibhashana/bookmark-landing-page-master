@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: var(--size-300);
   line-height: 1;
   font-weight: var(--fw-bold);
   color: var(--clr-neutral-100);
   white-space: nowrap;
-  padding: 1.1em 1.25em;
+  padding: 1.07em 1.25em;
   border: 2px solid var(--btn-color);
   border-radius: 0.375em;
   cursor: pointer;

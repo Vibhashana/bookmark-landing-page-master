@@ -33,10 +33,27 @@
   &__list {
     border-top: 1px solid var(--clr-neutral-150);
     margin-bottom: var(--size-800);
+
+    @media (max-width: 40em) {
+      .tabs__list {
+        margin-inline: auto;
+        max-width: 45.85rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        border-top: none;
+      }
+    }
   }
 
   &__tab-pane {
     --gap: var(--size-900);
     text-align: center;
+  }
+
+  @media (min-width: 40em) {
+    &__tab-pane {
+      text-align: start;
+    }
   }
 }
