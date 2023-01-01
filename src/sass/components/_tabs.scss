@@ -35,14 +35,12 @@
     margin-bottom: var(--size-800);
 
     @media (min-width: 40em) {
-      .tabs__list {
-        margin-inline: auto;
-        max-width: 45.85rem;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-        border-top: none;
-      }
+      margin-inline: auto;
+      max-width: 45.85rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      border-top: none;
     }
   }
 
