@@ -34,7 +34,7 @@
     border-top: 1px solid var(--clr-neutral-150);
     margin-bottom: var(--size-800);
 
-    @media (max-width: 40em) {
+    @media (min-width: 40em) {
       .tabs__list {
         margin-inline: auto;
         max-width: 45.85rem;
