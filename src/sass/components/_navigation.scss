@@ -119,10 +119,13 @@
 
     a {
       font-size: var(--size-200);
-      letter-spacing: 0.125em;
 
       &:hover {
         color: var(--clr-secondary-400);
+      }
+
+      &.btn {
+        padding-inline: 2.5em;
       }
     }
   }
