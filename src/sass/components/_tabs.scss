@@ -8,6 +8,11 @@
     border-bottom: 1px solid var(--clr-neutral-150);
     color: var(--clr-neutral-300);
 
+    &:not(&--active):hover,
+    &:not(&--active):focus-visible {
+      color: var(--clr-secondary-400);
+    }
+
     &::after {
       content: "";
       position: absolute;

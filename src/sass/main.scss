@@ -10,6 +10,15 @@
 @use "components/accordion";
 @use "components/social-nav";
 
+a {
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--clr-secondary-400);
+  }
+}
+
 .hero {
   text-align: center;
 
@@ -39,6 +48,9 @@
   --gap: 1.875rem;
   max-width: 57rem;
   margin-inline: auto;
+  grid-template-columns: repeat(auto-fill, minmax(13.125rem, 1fr));
+  grid-auto-flow: initial;
+  grid-auto-columns: auto;
 }
 
 @media (min-width: 40em) {
@@ -51,10 +63,21 @@
   }
 }
 
+@media (min-width: 40em) {
+  .faq {
+    margin-top: var(--size-900);
+  }
+}
+
 .contact {
   &__inner-wrapper {
     max-width: 28rem;
     margin-inline: auto;
+  }
+
+  &__heading {
+    font-weight: var(--fw-bold);
+    font-size: var(--size-500);
   }
 
   &__sub-heading {
@@ -67,7 +90,6 @@
   @media (min-width: 40em) {
     &__heading {
       font-size: var(--size-600);
-      font-weight: var(--fw-bold);
     }
   }
 }
