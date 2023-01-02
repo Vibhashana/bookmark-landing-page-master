@@ -93,3 +93,29 @@ a {
     }
   }
 }
+
+.footer {
+  --logo-text: var(--clr-neutral-100);
+
+  @media (min-width: 40em) {
+    --size-700: var(--size-600);
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-600);
+    text-align: center;
+
+    @media (min-width: 40em) {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 40em) {
+    .social-nav {
+      margin-left: auto;
+    }
+  }
+}
