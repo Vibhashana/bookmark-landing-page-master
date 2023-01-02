@@ -10,6 +10,25 @@
 @use "components/accordion";
 @use "components/social-nav";
 
+.skip-navigation {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+  padding: 0.25em 0.5em;
+  position: absolute;
+  top: 0.5em;
+  text-decoration: none;
+  font-size: var(--size-400);
+  border-radius: 0 0.375em 0.375em 0;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+
+  &:focus-visible {
+    transform: translateX(0);
+    outline: none;
+    color: var(--clr-neutral-100);
+  }
+}
+
 a {
   transition: color 0.2s ease-in-out;
 
@@ -29,6 +48,10 @@ a {
   @media (max-width: 40em) {
     & p {
       margin-inline: auto;
+    }
+
+    &__image-wrapper {
+      order: -1;
     }
   }
 

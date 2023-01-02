@@ -89,3 +89,13 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
+::selection {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+*:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.25em;
+}

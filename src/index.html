@@ -30,6 +30,7 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body class="bg-neutral-100 text-neutral-300">
+    <a href="#main" class="skip-navigation">Skip to main content</a>
     <header class="primary-header">
       <div class="container flex align-items-center space-between">
         <a href="#" class="logo text-primary-700" aria-label="Bookmark logo">
@@ -143,7 +144,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero decorative | py-900">
         <div class="container">
           <div class="even-columns align-items-center">
@@ -160,7 +161,7 @@
                 <a href="#" class="btn btn-default">Get it on Firefox</a>
               </div>
             </div>
-            <div>
+            <div class="hero__image-wrapper">
               <img src="images/illustration-hero.svg" alt="" />
             </div>
           </div>
@@ -230,7 +231,7 @@
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
                 <div class="flow">
-                  <h3>Bookmark in one click</h3>
+                  <h3 class="h2">Bookmark in one click</h3>
                   <p>
                     Organize your bookmarks however you like. Our simple
                     drag-and-drop interface gives you complete control over how
@@ -245,7 +246,7 @@
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
                 <div class="flow">
-                  <h3>Intelligent search</h3>
+                  <h3 class="h2">Intelligent search</h3>
                   <p>
                     Our powerful search feature will help you find saved sites
                     in no time at all. No need to trawl through all of your
@@ -260,7 +261,7 @@
                   <img src="images/illustration-features-tab-1.svg" alt="" />
                 </div>
                 <div class="flow">
-                  <h3>Share your bookmarks</h3>
+                  <h3 class="h2">Share your bookmarks</h3>
                   <p>
                     Easily share your bookmarks and collections with others.
                     Create a shareable link that you can send at the click of a
@@ -489,13 +490,13 @@
         </div>
       </section>
 
-      <section class="contact | bg-primary-400 text-center py-700" id="contact">
+      <section class="contact | bg-primary-400 text-center py-800" id="contact">
         <div class="container">
           <div class="contact__inner-wrapper | flow">
             <p class="contact__sub-heading">35,000+ already joined</p>
-            <div class="contact__heading | h3 text-neutral-100">
+            <h2 class="contact__heading | h3 text-neutral-100">
               Stay up-to-date with what we're doing
-            </div>
+            </h2>
             <form netlify class="form | even-columns">
               <div class="form__input">
                 <input
@@ -506,9 +507,7 @@
                   autocomplete="email"
                 />
                 <span class="form__feedback form__feedback--error">
-                  <span class="form__feedback-text">
-                    Whoops, make sure it's an email
-                  </span>
+                  Whoops, make sure it's an email
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

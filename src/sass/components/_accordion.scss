@@ -16,10 +16,10 @@
   &__body {
     /* visibility: hidden; */
     /* height: 0; */
-    padding-block: var(--size-400);
+    padding-block: var(--size-600);
     border-bottom: 1px solid var(--clr-neutral-150);
 
-    &__body p {
+    p {
       margin-bottom: 0;
       max-width: max-content;
     }
