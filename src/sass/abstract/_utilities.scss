@@ -87,3 +87,32 @@
     display: none;
   }
 }
+
+.decorative {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    aspect-ratio: 4 / 3;
+    width: 75%;
+    background-color: var(--clr-primary-400);
+    border-radius: 100vmax 0 0 100vmax;
+    box-shadow: 13vw 0 0 0 var(--clr-primary-400);
+    z-index: -1;
+  }
+
+  &--left {
+    padding-bottom: 3rem;
+
+    &::after {
+      right: auto;
+      left: 0;
+      aspect-ratio: 4 / 3.55;
+      border-radius: 0 100vmax 100vmax 0;
+      box-shadow: -13vw 0 0 0 var(--clr-primary-400);
+    }
+  }
+}
