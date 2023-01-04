@@ -94,7 +94,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -1.5rem;
+    bottom: calc(var(--size-500) * -1);
     right: 0;
     aspect-ratio: 4 / 3;
     width: 75%;
@@ -106,7 +106,7 @@
   }
 
   &--left {
-    padding-bottom: 3rem;
+    padding-bottom: var(--size-700);
 
     &::after {
       right: auto;

@@ -219,7 +219,7 @@
 
             <div class="tabs__content">
               <div
-                class="tabs__tab-pane even-columns"
+                class="tabs__tab-pane | even-columns align-items-center"
                 id="simple-tab"
                 role="tabpanel"
                 aria-labelledby="simple"
@@ -241,7 +241,7 @@
               </div>
 
               <div
-                class="tabs__tab-pane even-columns"
+                class="tabs__tab-pane | even-columns align-items-center"
                 id="speedy-tab"
                 role="tabpanel"
                 aria-labelledby="speedy"
@@ -263,7 +263,7 @@
               </div>
 
               <div
-                class="tabs__tab-pane even-columns"
+                class="tabs__tab-pane | even-columns align-items-center"
                 id="easy-tab"
                 role="tabpanel"
                 aria-labelledby="easy"
@@ -527,10 +527,17 @@
         <div class="container">
           <div class="contact__inner-wrapper | flow">
             <p class="contact__sub-heading">35,000+ already joined</p>
-            <h2 class="contact__heading | h3 text-neutral-100">
+            <h2
+              class="contact__heading | h3 text-neutral-100"
+              id="contact-heading"
+            >
               Stay up-to-date with what we're doing
             </h2>
-            <form netlify class="form | even-columns">
+            <form
+              netlify
+              class="form | even-columns"
+              aria-labelledby="contact-heading"
+            >
               <div class="form__input">
                 <input
                   type="email"
